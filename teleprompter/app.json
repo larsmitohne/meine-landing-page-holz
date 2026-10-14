@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Teleprompter",
+    "slug": "teleprompter",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.larsmitohne.teleprompter",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Die App braucht die Kamera für die Videoaufnahme.",
+          "microphonePermission": "Die App braucht das Mikrofon für den Ton der Aufnahme.",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "savePhotosPermission": "Die App speichert Aufnahmen in deiner Galerie.",
+          "granularPermissions": ["video"]
+        }
+      ]
+    ]
+  }
+}
